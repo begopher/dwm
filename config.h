@@ -4,18 +4,31 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:size=16" };
 static const char dmenufont[]       = "JetBrains Mono:size=16";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+// -------------------------------------
+// |tags|title                  |status|
+// |------------------------------------
+// |master             |stack          |
+// -------------------------------------
+
+// good 
+static const char col_gray1[]       = "#3b4252";	 // backgorund color: status, and tags and title if not active
+// bad
+static const char col_gray2[]       = "#898d92";	 // border color: for unselected windows
+// good
+static const char col_gray3[]       = "#898d92";	 // foreground color: for unactive tags, status
+// good
+static const char col_gray4[]       = "white";		 // foreground color: for active tag and title
+// good 
+static const char col_cyan[]        = "#3b4252";	 // background color: active tag and title
+// good
+static const char col_cyan2[]       = "white";		 // border color: for  selected window
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan2  },
 };
 
 /* tagging */
